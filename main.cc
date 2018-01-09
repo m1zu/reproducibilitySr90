@@ -114,11 +114,15 @@ int main(int argc, char** argv) {
   c1->cd(1);
   gStyle->SetOptStat("nemrou");
   h_mean->SetLineColor(kRed);
-  h_mean->GetXaxis()->SetTitle("all channel mean signal / pixel");
+  h_mean->GetXaxis()->SetTitle("all channel mean signal value / pixel");
+  h_mean->GetXaxis()->SetTitleOffset(1.25);
+  h_mean->GetXaxis()->SetTitleSize(20);
   h_mean->Draw();
   c1->cd(2);
-  h_median->GetXaxis()->SetTitle("all channel median signal / pixel");
+  h_median->GetXaxis()->SetTitle("all channel median signal value / pixel");
   h_median->SetLineColor(kBlue);
+  h_median->GetXaxis()->SetTitleOffset(1.25);
+  h_median->GetXaxis()->SetTitleSize(20);
   h_median->Draw();
 
   /*
