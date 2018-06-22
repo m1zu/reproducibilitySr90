@@ -4,13 +4,14 @@ CONFIG += qt debug warn_on
 QMAKE_CXXFLAGS+= -std=c++11 -Wno-deprecated-register
 
 SOURCES += \
-  main.cc
+  main.cc \
 
-CLASSES+= \
+CLASSES += \
   Helpers \
   ProgressBar \
   Functions \
-  RootExecFunctionWrapper
+  RootExecFunctionWrapper \
+  HistCalculator
 
 for(class, CLASSES) {
   HEADERS += $${class}.hh
